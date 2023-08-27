@@ -1,0 +1,16 @@
+//clinisnoez page
+.clinisnoez{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.clinisnoez__title{
+  font-size: 1.77777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 1em;
+}
+.clinisnoez__img{
+  border-radius: 10px;
+  width: 100%;
+}

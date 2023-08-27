@@ -11,14 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath('./wp-content/themes/portfolio/public')
-    .js('wp-content/themes/portfolio/resources/js/script.js', 'wp-content/themes/portfolio/public/js/')
-    .sass('wp-content/themes/portfolio/resources/sass/site.scss', 'wp-content/themes/portfolio/public/css/')
+mix.setPublicPath('./wp-content/themes/clinicoeurs/public')
+    .js('wp-content/themes/clinicoeurs/resources/js/script.js', 'wp-content/themes/clinicoeurs/public/js/')
+    .sass('wp-content/themes/clinicoeurs/resources/sass/site.scss', 'wp-content/themes/clinicoeurs/public/css/')
     .options({
         processCssUrls: false
     })
     .browserSync({
-        proxy: 'portfolio.localhost',
+        proxy: 'clinicoeurs.localhost',
         notify: false
     })
     .version();

@@ -1,0 +1,100 @@
+@import "colors";
+/*  Media queries  */
+@media (min-width: 1024px){
+  //cliniclown
+  .cliniclown__texts{
+    max-width: 50%;
+  }
+  .cliniclown__img{
+    width: 40%;
+  }
+  //clinisnoez
+  .clinisnoez__texts{
+    max-width: 50%;
+  }
+  .clinisnoez__img{
+    width: 40%;
+  }
+  //clinitalent
+  .clinitalent__texts{
+    max-width: 50%;
+  }
+  .clinitalent__img{
+    width: 35%;
+  }
+  .clinitalent:nth-child(2n) .clinitalent__img{
+    order: -1;
+  }
+
+  //clinijunior
+  .clinijunior__texts{
+    max-width: 50%;
+  }
+  .clinijunior:nth-child(2) .clinijunior__img{
+    order: -1;
+  }
+  .clinijunior__img{
+    width: 40%;
+  }
+  //contact page
+  .contact__form{
+    min-width: 50%;
+  }
+  .field:first-of-type{
+    margin-right: 1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  //cliniclown
+  .cliniclown{
+    flex-direction: column;
+  }
+  .cliniclown__img{
+    order: 2;
+    margin-top: 2em;
+  }
+  //clinisnoez
+  .clinisnoez{
+    flex-direction: column;
+  }
+  .clinisnoez__img{
+    margin-top: 1em;
+  }
+  //clinitalent
+  .clinitalent{
+    flex-direction: column;
+  }
+  .clinitalent__img{
+    margin: 1em 0 2em;
+  }
+
+  //clinijunior
+  .clinijunior{
+    flex-direction: column;
+  }
+  .clinijunior__img{
+    margin-top: 1em;
+  }
+  //contact
+  .field:first-of-type{
+    margin-right: 0;
+  }
+  .shop__img{
+    width: 100%;
+  }
+  .shop__info{
+    margin-left: 0;
+  }
+  .shop__container{
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px){
+  .contact__fields{
+    grid-template-columns: 1fr;
+  }
+  .footer{
+    flex-direction: column;
+  }
+}

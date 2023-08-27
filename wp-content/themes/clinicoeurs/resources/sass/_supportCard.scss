@@ -1,0 +1,20 @@
+@import "colors";
+//support Card
+.support{
+  background-color: $light-yellow;
+  padding: 2em;
+  border-radius: 1.5em;
+}
+.support__title{
+  font-size: 1.77777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}
+.support__link{
+  text-decoration: none;
+  color: $blue;
+  transition: all 200ms linear;
+}
+.support__link:hover, .support__link:focus{
+  color: $yellow;
+}

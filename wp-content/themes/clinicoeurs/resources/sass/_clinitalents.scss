@@ -1,0 +1,40 @@
+@import "colors";
+//clinitalents page
+.clinitalents{
+  display: flex;
+  flex-direction: column;
+}
+.clinitalents__title{
+  font-size: 1.777777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}
+.clinitalent__title{
+  font-size: 1.333333em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.75em;
+}
+.clinitalent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+.clinitalent__img{
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.clinitalents__shop-excerpt{
+  align-self: center;
+  margin: 2em 0 3em;
+  font-family: Quicksand-Bold, sans-serif;
+}
+.clinitalents__shop-link{
+  text-decoration: none;
+  color: $blue;
+  transition: all 200ms linear;
+}
+.clinitalents__shop-link:hover, .clinitalents__shop-link:focus{
+  color: $yellow;
+}

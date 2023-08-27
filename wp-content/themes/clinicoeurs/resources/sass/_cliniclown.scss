@@ -1,0 +1,18 @@
+@import "colors";
+//cliniclown page
+.cliniclown{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.cliniclown__img{
+  border-radius: 10px;
+  width: 100%;
+}
+
+.cliniclown__title{
+  font-size: 1.777777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 1em;
+}

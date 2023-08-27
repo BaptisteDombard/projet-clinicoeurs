@@ -1,0 +1,25 @@
+@import "fonts";
+@import "reset";
+@import "utils";
+@import "colors";
+@import "cliniclown";
+@import "clinisnoez";
+@import "clinitalents";
+@import "clinijunior";
+@import "contact";
+@import "footer";
+@import "supportCard";
+
+.body{
+  background-color: white;
+}
+.main{
+  padding: 5.5em 15% 0;
+  width: 70%;
+}
+a{
+  display: inline-block;
+}
+//Onboarding Section
+
+@import "media";

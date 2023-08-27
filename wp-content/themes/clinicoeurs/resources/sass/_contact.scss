@@ -1,0 +1,114 @@
+@import "colors";
+//Titles
+.contact h2, .shop h2{
+  font-size: 1.7777777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+}
+.contact h3, .shop h3, .contact__info-subtitle, .shop__info-subtitle{
+  font-size: 1.3333333em;
+  font-family: Quicksand-SemiBold, sans-serif;
+}
+//Contact Section
+.contact{
+  margin-bottom: 2em;
+}
+.contact__excerpt{
+  margin: 1.5em 0 2em;
+}
+//form section
+.contact__form-title{
+  margin-bottom: 0.7em;
+}
+.contact__form{
+  min-width: 50%;
+}
+.contact__fields{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.field{
+  display: flex;
+  flex-direction: column;
+}
+.field__input{
+  border: 2px solid $yellow;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.field:nth-child(n+3){
+  grid-column: 1/-1;
+  margin-top: 0.5em;
+}
+.contact__submit{
+  font-family: Quicksand-Medium, sans-serif;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  font-size: 1em;
+  color: white;
+  background-color: $yellow;
+  border: none;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+.contact__submit:hover, .contact__submit:focus{
+  background-color: white;
+  color: $yellow;
+}
+//contact info section
+.contact__container{
+  display: flex;
+}
+.contact__info{
+  margin: 3em 0 0 10em;
+}
+.contact__info-item:first-of-type{
+  margin-bottom: 2em;
+}
+.contact__info-phone, .contact__info-mail{
+  text-decoration: none;
+  color: $blue;
+  transition: all 200ms linear;
+}
+.contact__info-phone:hover, .contact__info-phone:focus, .contact__info-mail:hover, .contact__info-mail:focus{
+  color: $yellow;
+}
+
+//Shop Section
+.shop__title{
+  margin-bottom: 0.5em;
+}
+.shop__excerpt:first-of-type{
+  margin-bottom: 0.3em;
+}
+.shop__excerpt:last-of-type{
+  margin-bottom: 1.5em;
+}
+.shop__container{
+  display: flex;
+}
+.shop__img{
+  width: 70%;
+}
+.shop__info{
+  margin-left: 8em;
+}
+.shop__info-item{
+  margin-bottom: 2em;
+}
+.shop__info-subtitle{
+  margin-bottom: 0.5em;
+}
+.shop__info-schedule th{
+  padding-right: 2em;
+}
+.shop__info-phonelink{
+  text-decoration: none;
+  color: $blue;
+  transition: all 200ms linear;
+}
+.shop__info-phonelink:hover, .shop__info-phonelink:focus{
+  color: $yellow;
+}
+
+

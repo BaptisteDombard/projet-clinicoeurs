@@ -25,6 +25,14 @@ add_action('admin_menu', 'menu_items_remove');
 // Create custom post types
 function clinicoeur_register_custom_post_types()
 {
+    register_post_type('talent', [
+        'label' => 'Talents',
+        'description' => 'Talents des clinitalents',
+        'public' => true,
+        'menu_position' => 22,
+        'menu_icon' => 'dashicons-admin-customizer',
+        'supports' => ['title', 'editor', 'thumbnail'],
+    ]);
     register_post_type('service', [
         'label' => 'Services',
         'description' => 'Services des Clinicoeurs',
