@@ -1,8 +1,15 @@
 <footer class="footer">
-    <nav class="footer_nav">
+    <nav class="footer__nav">
         <h2 class="hidden">Navigation secondaire</h2>
         <ul class="footer__links">
             <?php foreach(clinicoeur_get_menu('footer') as $link): ?>
+                <li class="footer__item">
+                    <a href="<?= $link->href; ?>" class="footer__link"><?= $link->label; ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <ul class="footer__links">
+            <?php foreach(clinicoeur_get_menu('services') as $link): ?>
                 <li class="footer__item">
                     <a href="<?= $link->href; ?>" class="footer__link"><?= $link->label; ?></a>
                 </li>

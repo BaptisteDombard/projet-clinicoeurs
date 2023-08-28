@@ -1,0 +1,36 @@
+//Volunteer Page
+.volunteers__title{
+  font-size: $big-title;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 1em;
+}
+.volunteers__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.volunteers__img{
+  width: 100%;
+  border-radius: 10px;
+}
+.volunteers__recruit-title{
+  font-size: $small-title;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 1em;
+}
+.volunteers__recruit-excerpt{
+  margin-bottom: 1em;
+}
+.volunteers__recruit-link{
+  color: white;
+  background-color: $yellow;
+  text-decoration: none;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  transition: all 200ms linear;
+}
+.volunteers__recruit-link:hover, .volunteers__recruit-link:focus{
+  background-color: white;
+  color: $yellow;
+}

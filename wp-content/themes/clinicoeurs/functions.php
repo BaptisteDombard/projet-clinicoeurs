@@ -89,6 +89,8 @@ add_action('init', 'clinicoeur_register_custom_post_types');
 
 // Register existing navigation menus
 register_nav_menu('main', 'Navigation principale du site web (en-tête)');
+register_nav_menu('services', 'Menu des services');
+register_nav_menu('support', 'Menu des différents moyens de nous soutenir');
 register_nav_menu('footer', 'Navigation de pied de page');
 
 

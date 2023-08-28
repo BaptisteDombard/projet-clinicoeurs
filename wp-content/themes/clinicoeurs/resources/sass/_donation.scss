@@ -1,0 +1,47 @@
+@import "colors";
+//Donation page
+.donations__title{
+  font-size: 1.777777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}
+.donations__excerpt{
+  margin-bottom: 2em;
+}
+.donation__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+.donation{
+  padding: 2em;
+  background-color: #E8E8E8;
+  border-radius: 10px;
+}
+.donation:last-of-type{
+  grid-column: 1/-1;
+  margin-bottom: 3em;
+}
+.donation:last-of-type .donation__excerpt{
+  margin-bottom: 0.5em;
+}
+.donation__title{
+  font-size: 1.333333em;
+  margin-bottom: 0.5em;
+}
+.donation__account{
+  color: $clinipurple;
+}
+.donation__link, .fiscal__link{
+  color: $blue;
+  text-decoration: none;
+  transition: all 200ms linear;
+}
+.donation__link:hover, .donation__link:focus, .fiscal__link:hover, .fiscal__link:focus{
+  color: $yellow;
+}
+.fiscal__title{
+  font-size: 1.7777777em;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}

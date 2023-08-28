@@ -2,13 +2,20 @@
 @import "reset";
 @import "utils";
 @import "colors";
+@import "sevicesSection";
+@import "about";
 @import "cliniclown";
 @import "clinisnoez";
 @import "clinitalents";
 @import "clinijunior";
+@import "product";
+@import "productCard";
+@import "volunteer";
+@import "donation";
 @import "contact";
-@import "footer";
 @import "supportCard";
+@import "footer";
+
 
 .body{
   background-color: white;
@@ -19,7 +26,79 @@
 }
 a{
   display: inline-block;
+  font-family: Quicksand-SemiBold, sans-serif;
 }
 //Onboarding Section
+.onboarding{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+//news Section
+.news{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.news__title{
+  margin: 2em 0 1em;
+  font-size: $big-title;
+  font-family: Quicksand-SemiBold, sans-serif;
+}
+.news__container{
+  display: flex;
+}
+.news__img{
+  border-radius: 10px;
+}
+.news__excerpt:first-of-type{
+  margin-bottom: 1em;
+}
+.news__excerpt:last-of-type{
+  margin-bottom: 3em;
+}
+.news__socials{
+  display: flex;
+}
+.news__social-container{
+  position: relative;
+}
+.news__social-logo{
+  transition: all 200ms linear;
+}
+.news__social-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 96px;
+  height: 96px;
+}
+.news__social-link:hover .news__social-logo{
+  scale: 1;
+}
+//testimony section
+.testimony__title{
+  font-size: $big-title;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}
+.testimony__cards{
+  display: flex;
+  gap: 2em;
+}
+.testimony__excerpt{
+  margin-bottom: 1em;
+}
+.testimony__link{
+  color: $blue;
+  text-decoration: none;
+  transition: all 200ms linear;
+}
+.testimony__link:hover, .testimony__link:focus{
+  color: $yellow;
+}
 
+@import "testimonyCard";
 @import "media";

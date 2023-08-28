@@ -11,6 +11,6 @@
                 ont un rôle très particulier, plus sérieux et important en milieu hospitalier</p>
         </div>
     </section>
-    <?php require 'components/support.php'?>
+    <?php include 'components/support.php'?>
 </main>
 <?= get_footer()?>

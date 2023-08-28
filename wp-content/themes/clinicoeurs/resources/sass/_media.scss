@@ -1,6 +1,33 @@
 @import "colors";
 /*  Media queries  */
 @media (min-width: 1024px){
+  //Home page
+  .onboarding__texts{
+    max-width: 50%;
+  }
+  .onboarding__img{
+    width: 40%;
+  }
+  .news__texts{
+    width: 60%;
+  }
+  .news__img{
+    order: -1;
+    width: 25%;
+    margin-right: 3em;
+  }
+  .testimony__card{
+    width: 25%;
+  }
+
+  //about
+  .about__texts{
+    max-width: 50%;
+  }
+  .about__img{
+    width: 40%;
+  }
+
   //cliniclown
   .cliniclown__texts{
     max-width: 50%;
@@ -8,6 +35,7 @@
   .cliniclown__img{
     width: 40%;
   }
+
   //clinisnoez
   .clinisnoez__texts{
     max-width: 50%;
@@ -15,6 +43,7 @@
   .clinisnoez__img{
     width: 40%;
   }
+
   //clinitalent
   .clinitalent__texts{
     max-width: 50%;
@@ -36,6 +65,23 @@
   .clinijunior__img{
     width: 40%;
   }
+
+  //product
+  .products__info-texts{
+    max-width: 50%;
+  }
+  .products__info-img{
+    width: 35%;
+  }
+
+  //volunteers
+  .volunteers__texts{
+    max-width: 50%;
+  }
+  .volunteers__img{
+    width: 40%;
+  }
+
   //contact page
   .contact__form{
     min-width: 50%;
@@ -46,6 +92,34 @@
 }
 
 @media (max-width: 1024px) {
+  //Home page
+  .onboarding{
+    flex-direction: column;
+  }
+  .onboarding__img{
+    margin-top: 2em;
+  }
+  .news__img{
+    width: 100%;
+  }
+  .news__container{
+    flex-direction: column;
+  }
+  .testimony__cards{
+    flex-direction: column;
+  }
+
+  //about
+  .about{
+    flex-direction: column;
+  }
+  .about__img{
+    margin-top: 2em;
+  }
+  .services__container{
+    grid-template-columns: 1fr;
+  }
+
   //cliniclown
   .cliniclown{
     flex-direction: column;
@@ -76,6 +150,29 @@
   .clinijunior__img{
     margin-top: 1em;
   }
+
+  //products
+  .products__info-container{
+    flex-direction: column;
+  }
+  .products__info-img{
+    margin-top: 1em;
+  }
+
+
+  //volunteers
+  .volunteers__container{
+    flex-direction: column;
+  }
+  .volunteers__img{
+    margin-top: 1em;
+  }
+
+  //donation
+  .donation__container{
+    grid-template-columns: 1fr;
+  }
+
   //contact
   .field:first-of-type{
     margin-right: 0;
@@ -91,9 +188,29 @@
   }
 }
 @media (max-width: 500px){
+  //about
+  .sponsor__container{
+    justify-content: center;
+  }
+  .sponsor__img{
+    max-width: 100%;
+  }
+
+  //contact
   .contact__fields{
     grid-template-columns: 1fr;
   }
+
+  //products
+  .products__container{
+    flex-direction: column;
+  }
+  .product__card+.product__card{
+    margin-left: 0;
+    margin-top: 1em;
+  }
+
+  //footer
   .footer{
     flex-direction: column;
   }

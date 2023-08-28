@@ -102,12 +102,12 @@
 .shop__info-schedule th{
   padding-right: 2em;
 }
-.shop__info-phonelink{
+.shop__info-phonelink, .shop__link{
   text-decoration: none;
   color: $blue;
   transition: all 200ms linear;
 }
-.shop__info-phonelink:hover, .shop__info-phonelink:focus{
+.shop__info-phonelink:hover, .shop__link:hover, .shop__info-phonelink:focus, .shop__link:focus{
   color: $yellow;
 }
 

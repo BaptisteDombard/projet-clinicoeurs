@@ -1,0 +1,65 @@
+//service section
+.services__title{
+  font-size: $big-title;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}
+.services__excerpt{
+  margin-bottom: 1em;
+}
+.services__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+.service{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 10px;
+}
+[class ~= "service__cliniclown"]{
+  background-color: $cliniorange;
+}
+[class ~= "service__clinijunior"]{
+  background-color: $cliniblue;
+}
+[class ~= "service__clinisnoez"]{
+  background-color: $clinipurple;
+}
+[class ~= "service__clinitalent"]{
+  background-color: $clinigreen;
+}
+
+.service__title{
+  font-size: $small-title;
+  font-family: Quicksand-SemiBold, sans-serif;
+  margin-bottom: 0.5em;
+}
+.service__excerpt{
+  margin-bottom: 1em;
+}
+.service__excerpt:not(.service:nth-child(2) .service__excerpt){
+  max-width: 90%;
+}
+.service__link{
+  color: white;
+  text-decoration: none;
+  align-self: flex-end;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+}
+
+[class ~= "service__cliniclown-link"]{
+  background-color: $servRed;
+}
+[class ~= "service__clinijunior-link"]{
+  background-color: $servBlue;
+}
+[class ~= "service__clinisnoez-link"]{
+  background-color: $servPurple;
+}
+[class ~= "service__clinitalent-link"]{
+  background-color: $servGreen;
+}

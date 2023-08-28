@@ -29,6 +29,18 @@
                     <span class="header__nav-label"><?= $link->label; ?></span>
                 </a>
             <?php endforeach; ?>
+            <p class="header__nav-word">Nos services</p>
+            <?php foreach(clinicoeur_get_menu('services') as $link): ?>
+                <a href="<?= $link->href; ?>" class="header__nav-link">
+                    <span class="header__nav-label"><?= $link->label; ?></span>
+                </a>
+            <?php endforeach; ?>
+            <p class="header__nav-word">Nous soutenir</p>
+            <?php foreach(clinicoeur_get_menu('support') as $link): ?>
+                <a href="<?= $link->href; ?>" class="header__nav-link">
+                    <span class="header__nav-label"><?= $link->label; ?></span>
+                </a>
+            <?php endforeach; ?>
         </div>
     </nav>
 </header>

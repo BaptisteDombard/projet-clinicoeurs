@@ -17,6 +17,6 @@
         </div>
         <img class="clinijunior__img" src="<?= wp_get_attachment_image_url(get_field('image_2'), 'medium') ?>" alt="">
     </section>
-    <?php require 'components/support.php'?>
+    <?php include 'components/support.php'?>
 </main>
 <?= get_footer()?>
