@@ -314,6 +314,15 @@
   }
 
   //contact
+  .contact__fields{
+    grid-template-columns: 1fr;
+  }
+  .contact__container{
+    flex-direction: column;
+  }
+  .contact__info{
+    margin: 3em 0 0;
+  }
   .field:first-of-type{
     margin-right: 0;
   }
@@ -334,11 +343,6 @@
   }
   .sponsor__img{
     max-width: 100%;
-  }
-
-  //contact
-  .contact__fields{
-    grid-template-columns: 1fr;
   }
 
   //products
