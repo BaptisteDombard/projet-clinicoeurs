@@ -57,7 +57,7 @@
                     <ul class="header__nav-sublist">
                         <?php foreach(clinicoeur_get_menu('services') as $link): ?>
                             <li class="header__nav-subitem">
-                                <a href="<?= $link->href; ?>" class="header__nav-link">
+                                <a href="<?= $link->href; ?>" class="header__nav-sublink">
                                     <span class="header__nav-label"><?= $link->label; ?></span>
                                 </a>
                             </li>
@@ -69,12 +69,17 @@
                     <ul class="header__nav-sublist">
                         <?php foreach(clinicoeur_get_menu('support') as $link): ?>
                             <li class="header__nav-subitem">
-                                <a href="<?= $link->href; ?>" class="header__nav-link">
+                                <a href="<?= $link->href; ?>" class="header__nav-sublink">
                                     <span class="header__nav-label"><?= $link->label; ?></span>
                                 </a>
                             </li>
                         <?php endforeach; ?>
                     </ul>
+                </li>
+                <li class="header__nav-item header__nav-langlist">
+                    <a href="#" class="header__nav-lang header__nav-link">DE</a>
+                    <a href="#" class="header__nav-lang header__nav-link">FR</a>
+                    <a href="#" class="header__nav-lang header__nav-link">NL</a>
                 </li>
             </ul>
         </div>

@@ -36,16 +36,20 @@
     display: block;
   }
 
-  .header__nav-subitem:nth-child(2n+1):hover, .header__nav-subitem:nth-child(2n+1) .header__nav-link:focus{
+  .header__nav-subitem:hover .header__nav-sublink{
+    color: white;
+  }
+
+  .header__nav-subitem:nth-child(2n+1):hover{
     background-color: $cliniorange;
   }
-  .header__nav-subitem:nth-child(2n):hover, .header__nav-subitem:nth-child(2n) .header__nav-link:focus{
+  .header__nav-subitem:nth-child(2n):hover{
     background-color: $clinipurple;
   }
-  .header__nav-subitem:nth-child(3n):hover, .header__nav-subitem:nth-child(3n) .header__nav-link:focus{
+  .header__nav-subitem:nth-child(3n):hover{
     background-color: $clinigreen;
   }
-  .header__nav-subitem:nth-child(4n):hover, .header__nav-subitem:nth-child(4n) .header__nav-link:focus{
+  .header__nav-subitem:nth-child(4n):hover{
     background-color: $cliniblue;
   }
 

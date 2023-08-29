@@ -28,7 +28,11 @@
   color: black;
 }
 
-.header__nav-link{
+.header__nav-link, .header__nav-sublink{
   text-decoration: none;
   color: black;
+  transition: all 200ms linear;
+}
+.header__nav-link:hover, .header__nav-link:focus{
+  color: $yellow;
 }
