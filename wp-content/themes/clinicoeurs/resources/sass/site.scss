@@ -2,6 +2,7 @@
 @import "reset";
 @import "utils";
 @import "colors";
+@import "header";
 @import "sevicesSection";
 @import "about";
 @import "cliniclown";
@@ -19,6 +20,7 @@
 
 .body{
   background-color: white;
+
 }
 .main{
   padding: 5.5em 15% 0;
@@ -27,6 +29,9 @@
 a{
   display: inline-block;
   font-family: Quicksand-SemiBold, sans-serif;
+}
+*:focus{
+  border: 2px solid blue;
 }
 //Onboarding Section
 .onboarding{
@@ -75,8 +80,8 @@ a{
   width: 96px;
   height: 96px;
 }
-.news__social-link:hover .news__social-logo{
-  scale: 1;
+.news__social-link:hover ~ .news__social-logo{
+  width: 2em;
 }
 //testimony section
 .testimony__title{
@@ -100,5 +105,11 @@ a{
   color: $yellow;
 }
 
+.success{
+  color: $servGreen;
+}
+.field__error, .error{
+  color: $servRed;
+}
 @import "testimonyCard";
 @import "media";

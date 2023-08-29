@@ -49,6 +49,10 @@
   align-self: flex-end;
   padding: 0.5em 1.5em;
   border-radius: 10px;
+  transition: all 200ms linear;
+}
+.service__link:hover, .service__link:focus{
+  background-color: white;
 }
 
 [class ~= "service__cliniclown-link"]{
@@ -62,4 +66,17 @@
 }
 [class ~= "service__clinitalent-link"]{
   background-color: $servGreen;
+}
+
+[class ~= "service__cliniclown-link"]:hover, [class ~= "service__cliniclown-link"]:focus{
+  color: $servRed;
+}
+[class ~= "service__clinijunior-link"]:hover, [class ~= "service__clinijunior-link"]:focus{
+  color: $servBlue;
+}
+[class ~= "service__clinisnoez-link"]:hover, [class ~= "service__clinisnoez-link"]:focus{
+  color: $servPurple;
+}
+[class ~= "service__clinitalent-link"]:hover, [class ~= "service__clinitalent-link"]:focus{
+  color: $servGreen;
 }

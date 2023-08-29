@@ -191,6 +191,7 @@ function clinicoeur_execute_contact_form ()
             title: fn($data) => 'Nouveau message de ' . $data['firstname'] . ' ' . $data['latname'],
             content: fn($data) => 'Firstname: ' . $data['firstname'] . PHP_EOL . 'Lastname: ' . $data['lastname'] . PHP_EOL . 'Sujet: ' . $data['subject'] . PHP_EOL . 'Email: ' . $data['email'] . PHP_EOL . 'Message:' . PHP_EOL . $data['message'],
         )*/
+
         ->feedback();
 }
 
@@ -220,4 +221,34 @@ function clinicoeur_session_get(string $key)
 
     //la donnée n'existait pas dans la session flash
     return null;
+}
+
+function clinicoeur_mix($path)
+{
+
+    //$path = 'js/script.js'
+    $path = '/' . ltrim($path, "/");
+    if (!realpath(__DIR__ . '/public' . $path)) {
+        return '';
+    }
+
+    if (!($manifest = realpath(__DIR__ . '/public/mix-manifest.json'))) {
+        return get_stylesheet_directory_uri() . '/public' . $path;
+
+    }
+    //Ouvrir le fichier mix-manifest.json
+    $manifest = json_decode(file_get_contents($manifest), true);
+
+    //Regarder si on a une clé qui correspond au fichier chargé dans $path
+    if (!array_key_exists($path, $manifest)) {
+        return get_stylesheet_directory_uri() . '/public' . $path;
+
+    }
+
+    //Recupérer le hash
+    //Retourner la chemin versionné
+
+    return get_stylesheet_directory_uri() . '/public' . $manifest[$path];
+
+
 }

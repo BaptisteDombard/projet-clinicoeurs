@@ -5,19 +5,19 @@ namespace Clinicoeur;
 class ContactForm
 {
     /**
-     * Array containing teh form nonce information, etc.
+     * Array containing the form nonce information, etc.
      */
     protected array $config;
 
     /**
-     * Array representing the incoming data
+     * Array representing the incoming request data.
      */
     protected array $data;
 
     /**
-     * The previous pages URL
+     * The previous page's URL.
      */
-    protected string $referer;
+    protected string $referrer;
 
     /**
      * Create a new Form controller instance.
@@ -26,24 +26,23 @@ class ContactForm
     {
         $this->config = $config;
         $this->data = $data;
-        $this->referer = wp_get_referer();
+        $this->referrer = wp_get_referer();
     }
 
     /**
      * Check if the incoming request is authorized and if the data
-     * is correctly formated, otherwise redirect to the previous URL
-     * in order to display the validation errors
+     * is correctly formatted, otherwise, redirect to the previous
+     * URL in order to display the validation errors.
      */
     public function validate(array $rules): static
     {
-        if (! $this->verifyNonce()) {
+        if(! $this->verifyNonce()) {
             die('Invalid request.');
         }
 
-        if ($errors = $this->applyValidationRules($rules)){
+        if($errors = $this->applyValidationRules($rules)) {
             clinicoeur_session_flash($this->config['nonce_identifier'] . '_errors', $errors);
-            // la validation ne passe , ducoup message d'erreur
-            wp_safe_redirect($this->referer);
+            wp_safe_redirect($this->referrer);
             exit;
         }
 
@@ -64,13 +63,13 @@ class ContactForm
 
         foreach($rules as $field => $checks) {
             $value = $this->data[$field] ?? null;
-            $errors[$field] = $this->applyFiledValidation($field, $value, $checks);
+            $errors[$field] = $this->applyFieldValidation($field, $value, $checks);
         }
 
         return array_filter($errors);
     }
 
-    protected function applyFiledValidation(string $field, mixed $value, array $rules): ?string
+    protected function applyFieldValidation(string $field, mixed $value, array $rules): ?string
     {
         foreach ($rules as $rule) {
             $check = 'check' . ucfirst($rule);
@@ -80,7 +79,7 @@ class ContactForm
                 ? false
                 : $this->$errorMessage($field);
 
-            if ($error) return $error;
+            if($error) return $error;
         }
 
         return null;
@@ -103,16 +102,16 @@ class ContactForm
 
     protected function getEmailErrorMessage(string $field): string
     {
-        return 'Veuillez fournir une adresse mail valide';
+        return 'Veuillez fournir une adresse mail valide.';
     }
 
     /**
-     * Cleanup the data values
+     * Cleanup the data values.
      */
-    public function sanitize(array $methods):static
+    public function sanitize(array $methods): static
     {
-        foreach ($methods as $field => $method){
-            $method = 'sanitize_'. $method;
+        foreach ($methods as $field => $method) {
+            $method = 'sanitize_' . $method;
             $this->data[$field] = $method($this->data[$field] ?? '');
         }
 
@@ -120,7 +119,7 @@ class ContactForm
     }
 
     /**
-     * Insert the form data in the wordpress database
+     * Insert the form data into Wordpress' database.
      */
     public function save(callable $title, callable $content): static
     {
@@ -135,23 +134,23 @@ class ContactForm
     }
 
     /**
-     * Send the form data in an email
+     * Send the form data in an email.
      */
     public function send(callable $title, callable $content): static
     {
-        wp_mail(get_bloginfo('admin_email'), $title, $content);
+        wp_mail(get_bloginfo('admin_email'), $title($this->data), $content($this->data));
 
         return $this;
     }
 
     /**
      * Redirect to the previous URL in order to display
-     * a feedback message
+     * a feedback message.
      */
     public function feedback(): void
     {
         clinicoeur_session_flash($this->config['nonce_identifier'] . '_feedback', true);
-        wp_safe_redirect($this->referer);
+        wp_safe_redirect($this->referrer);
         exit;
     }
 }

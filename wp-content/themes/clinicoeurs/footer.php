@@ -25,5 +25,6 @@
         <a href="mailto:clinicoeurs@gmail.com" class="footer__mail">clinicoeurs@gmail.com</a>
     </address>
 </footer>
+<script type="application/javascript" src="<?= clinicoeur_mix('/js/script.js')?>"></script>
 </body>
 </html>

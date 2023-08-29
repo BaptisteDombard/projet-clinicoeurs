@@ -1,4 +1,4 @@
-<?php /* Template Name: Contact page template */ ?>
+<?php /* Template Name: Contact page template */?>
 <?= get_header()?>
 <main class="main">
 <section class="contact" aria-labelledby="contact__title">
